@@ -1,0 +1,143 @@
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-8) 0;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-accent), var(--color-primary));
+  transform: translateX(-50%);
+  border-radius: var(--radius-full);
+}
+
+.entry {
+  position: relative;
+  width: 50%;
+  padding: var(--space-4);
+}
+
+.left {
+  left: 0;
+  padding-right: var(--space-10);
+  text-align: right;
+}
+
+.right {
+  left: 50%;
+  padding-left: var(--space-10);
+  text-align: left;
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: var(--space-8);
+  border: 3px solid var(--color-bg);
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+.left .dot {
+  right: -8px;
+}
+
+.right .dot {
+  left: -8px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left .cardHeader {
+  flex-direction: row-reverse;
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.year {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-full);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 700;
+}
+
+.desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .line {
+    left: 20px;
+  }
+
+  .entry {
+    width: 100%;
+    padding-left: var(--space-12);
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    left: 0;
+  }
+
+  .left .cardHeader {
+    flex-direction: row;
+  }
+
+  .dot {
+    left: 12px !important;
+    right: auto !important;
+  }
+}

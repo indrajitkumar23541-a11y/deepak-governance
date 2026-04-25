@@ -1,0 +1,31 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.toggle:hover {
+  background: var(--color-surface-hover);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  display: block;
+}

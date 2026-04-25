@@ -1,0 +1,50 @@
+import { FaBookOpen, FaStickyNote, FaTrophy, FaProjectDiagram, FaBullseye } from 'react-icons/fa';
+
+export const statsData = [
+  {
+    id: 1,
+    icon: FaBookOpen,
+    value: 3,
+    label: 'Subjects',
+    suffix: '',
+    description: 'Core BA Subjects',
+    color: '#3B82F6',
+  },
+  {
+    id: 2,
+    icon: FaStickyNote,
+    value: 20,
+    label: 'Notes',
+    suffix: '+',
+    description: 'Handwritten & Digital',
+    color: '#10B981',
+  },
+  {
+    id: 3,
+    icon: FaTrophy,
+    value: 6,
+    label: 'Achievements',
+    suffix: '',
+    description: 'Awards & Certificates',
+    color: '#F59E0B',
+  },
+  {
+    id: 4,
+    icon: FaProjectDiagram,
+    value: 5,
+    label: 'Projects',
+    suffix: '',
+    description: 'Academic Projects',
+    color: '#8B5CF6',
+  },
+  {
+    id: 5,
+    icon: FaBullseye,
+    value: 1,
+    label: 'Goal',
+    suffix: '',
+    description: 'UPSC / Govt. Job',
+    color: '#EF4444',
+    isGoal: true,
+  },
+];
