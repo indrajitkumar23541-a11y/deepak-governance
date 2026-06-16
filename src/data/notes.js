@@ -1,4 +1,4 @@
-import { FaLandmark, FaBalanceScale, FaGlobeAmericas, FaScroll, FaUniversity, FaMapMarkedAlt } from 'react-icons/fa';
+import { FaLandmark, FaBalanceScale, FaGlobeAmericas, FaScroll, FaUniversity, FaMapMarkedAlt, FaMap } from 'react-icons/fa';
 
 export const notesData = [
   {
@@ -70,5 +70,15 @@ export const notesData = [
     pages: 42,
     format: 'PDF',
     color: '#059669',
+  },
+  {
+    id: 8,
+    title: 'Geography through Maps',
+    category: 'Geography',
+    description: 'Map-based study of geography covering four distinct levels: World Map, Country Map (India), State Map (Bihar), and District Map.',
+    icon: FaMap,
+    pages: 36,
+    format: 'PDF',
+    color: '#0D9488',
   },
 ];

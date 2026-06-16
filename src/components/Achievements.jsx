@@ -1,7 +1,21 @@
 import { motion } from 'framer-motion';
+import { FaFilePdf } from 'react-icons/fa';
 import SectionHeading from './ui/SectionHeading';
 import { achievementsData } from '../data/achievements';
+import pdf1 from '../assets/1.pdf';
+import pdf2 from '../assets/2.pdf';
+import pdf3 from '../assets/3.pdf';
+import pdf4 from '../assets/4.pdf';
+import pdf5 from '../assets/5.pdf';
 import styles from './Achievements.module.css';
+
+const pdfFiles = {
+  '1.pdf': pdf1,
+  '2.pdf': pdf2,
+  '3.pdf': pdf3,
+  '4.pdf': pdf4,
+  '5.pdf': pdf5,
+};
 
 export default function Achievements() {
   return (
@@ -51,6 +65,16 @@ export default function Achievements() {
                 </div>
                 <h3 className={styles.title}>{item.title}</h3>
                 <p className={styles.desc}>{item.description}</p>
+                {item.certificate && pdfFiles[item.certificate] && (
+                  <a
+                    href={pdfFiles[item.certificate]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.certificateLink}
+                  >
+                    <FaFilePdf className={styles.certIcon} /> View Certificate
+                  </a>
+                )}
               </motion.div>
               <motion.div 
                 className={styles.dot} 

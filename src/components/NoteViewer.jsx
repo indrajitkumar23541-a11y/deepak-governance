@@ -1,13 +1,26 @@
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaTimes, FaDownload, FaBookOpen } from 'react-icons/fa';
+import { FaTimes, FaDownload, FaBookOpen, FaMap } from 'react-icons/fa';
 import { notesData } from '../data/notes';
 import { notesContent } from '../data/notesContent';
 import { generateNotePDF } from '../utils/pdfGenerator';
+import worldMapImg from '../assets/world-map.png';
+import indiaMapImg from '../assets/india-map.png';
+import biharMapImg from '../assets/bihar-map.png';
+import nawadaMapImg from '../assets/nawada-map.png';
 import styles from './NoteViewer.module.css';
+
+const mapImages = {
+  'world-map.png': worldMapImg,
+  'india-map.png': indiaMapImg,
+  'bihar-map.png': biharMapImg,
+  'nawada-map.png': nawadaMapImg,
+};
 
 export default function NoteViewer({ noteId, onClose }) {
   const content = notesContent[noteId];
   const noteSummary = notesData.find(n => n.id === noteId);
+  const [activeMap, setActiveMap] = useState(null);
   
   if (!content || !noteSummary) return null;
 
@@ -49,7 +62,16 @@ export default function NoteViewer({ noteId, onClose }) {
               <div key={i} className={styles.section}>
                 <h3 className={styles.sectionTitle}>
                   <span className={styles.sectionNum}>{String(i + 1).padStart(2, '0')}</span>
-                  {section.heading}
+                  <span>{section.heading}</span>
+                  {section.hasMap && (
+                    <button
+                      className={styles.viewMapBtn}
+                      onClick={() => setActiveMap(section.mapImage)}
+                      title="View Map"
+                    >
+                      <FaMap className={styles.mapBtnIcon} /> View Map
+                    </button>
+                  )}
                 </h3>
                 <ul className={styles.pointsList}>
                   {section.points.map((point, j) => (
@@ -67,6 +89,48 @@ export default function NoteViewer({ noteId, onClose }) {
             </button>
           </div>
         </motion.div>
+
+        {/* Map Lightbox Overlay */}
+        <AnimatePresence>
+          {activeMap && (
+            <motion.div
+              className={styles.mapOverlay}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveMap(null)}
+            >
+              <motion.div
+                className={styles.mapContainer}
+                initial={{ scale: 0.9, y: 20 }}
+                animate={{ scale: 1, y: 0 }}
+                exit={{ scale: 0.9, y: 20 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  className={styles.closeMapBtn}
+                  onClick={() => setActiveMap(null)}
+                  aria-label="Close Map"
+                >
+                  <FaTimes />
+                </button>
+                <img
+                  src={mapImages[activeMap]}
+                  alt="Map Reference"
+                  className={styles.mapImage}
+                />
+                <div className={styles.mapTitle}>
+                  {content.title} — {
+                    activeMap === 'world-map.png' ? 'World Map Reference' :
+                    activeMap === 'india-map.png' ? 'Country Map (India)' :
+                    activeMap === 'bihar-map.png' ? 'State Map (Bihar)' :
+                    activeMap === 'nawada-map.png' ? 'District Map (Nawada)' : 'Map Reference'
+                  }
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </AnimatePresence>
   );

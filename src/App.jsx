@@ -6,6 +6,7 @@ import Subjects from './components/Subjects';
 import Notes from './components/Notes';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
+import Gallery from './components/Gallery';
 import DailyQuote from './components/DailyQuote';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ export default function App() {
         <Notes />
         <Projects />
         <Achievements />
+        <Gallery />
         <DailyQuote />
         <Contact />
       </main>

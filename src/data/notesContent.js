@@ -375,4 +375,57 @@ export const notesContent = {
       },
     ],
   },
+  8: {
+    title: 'Geography through Maps',
+    sections: [
+      {
+        heading: 'World Map',
+        hasMap: true,
+        mapImage: 'world-map.png',
+        points: [
+          'Major Mountain Ranges: Andes (South America - longest), Rockies (North America), Alps (Europe), Himalayas (Asia), Great Dividing Range (Australia).',
+          'Global River Systems: Nile (Africa - longest), Amazon (South America - largest discharge), Yangtze (Asia), Mississippi-Missouri (North America), Danube (Europe).',
+          'Crucial Straits & Canals: Strait of Malacca (Southeastern Asia), Strait of Gibraltar (Europe-Africa link), Suez Canal (Egypt - connects Red Sea to Mediterranean), Panama Canal (connects Atlantic to Pacific).',
+          'Major Deserts & Grasslands: Sahara, Gobi, Kalahari, Atacama (driest), Arabian; Prairies (North America), Steppes (Eurasia), Pampas (Argentina), Savannas (Africa).',
+          'Important Lines on Earth: Equator, Prime Meridian, International Date Line, Tropic of Cancer, and Tropic of Capricorn mapping across continents.',
+        ],
+      },
+      {
+        heading: 'Country Map (India)',
+        hasMap: true,
+        mapImage: 'india-map.png',
+        points: [
+          'Political Divisions: 28 States and 8 Union Territories; coastal states (9) vs. landlocked states (19); states sharing international borders.',
+          'International Frontiers: Radcliff Line (with Pakistan and Bangladesh), MacMahon Line (with China), Durand Line (with Afghanistan).',
+          'Physical Relief: Northern Mountains (Himalayan ranges), Northern fertile plains, Peninsular Plateau (Aravalis, Vindhyas, Deccan), Coastal Plains, Thar Desert.',
+          'Drainage & Hydrology: Himalayan rivers (Indus, Ganga, Brahmaputra flow paths) and Peninsular rivers (Godavari, Krishna, Narmada, Tapti).',
+          'Economic/Resource Mapping: Major mineral regions (Chhota Nagpur Plateau), key agricultural belts, biosphere reserves (Nilgiri, Sundarbans), and major ports.',
+        ],
+      },
+      {
+        heading: 'State Map (Bihar)',
+        hasMap: true,
+        mapImage: 'bihar-map.png',
+        points: [
+          'Geographical Boundaries: Bounded by Nepal in the north, West Bengal in the east, Uttar Pradesh in the west, and Jharkhand in the south.',
+          'Physical Features: Entirely located in the fertile Middle Gangetic Plain; River Ganga flows west-to-east dividing the state into North and South Bihar.',
+          'Monsoon & Climate: Humid subtropical climate; high vulnerability to floods in the north (due to rivers like Kosi, the "Sorrow of Bihar") and droughts in the south.',
+          'Forests & Sanctuaries: Valmiki National Park (West Champaran - Bihar\'s only tiger reserve), Kaimur Wildlife Sanctuary, Kanwar Lake (Begusarai - Ramsar site).',
+          'Cultural & Heritage Centers: Patna (ancient Pataliputra), Nalanda (ancient university), Bodh Gaya (place of Buddha\'s enlightenment), Rajgir, Sasaram.',
+        ],
+      },
+      {
+        heading: 'District Map (Nawada)',
+        hasMap: true,
+        mapImage: 'nawada-map.png',
+        points: [
+          'Geographical Location: Situated in the southern part of Bihar; bounded by Nalanda (North), Sheikhpura & Jamui (East), Gaya (West), and Koderma & Giridih districts of Jharkhand (South).',
+          'Administrative Divisions: Comprises 14 Blocks (including Nawada, Akbarpur, Hisua, Rajauli, Sirdala, Roh) and is part of the Magadh Division.',
+          'Topography & Hydrology: Primarily consists of Gangetic alluvial plains blending into the Chhota Nagpur plateau foothills; traversed by Sakri and Khuri rivers.',
+          'Tourism Landmark: Famous Kakolat Waterfall located in the Kakolat Hills, renowned for its scenic beauty and cold spring water.',
+          'Socio-Economic Base: Mostly agrarian economy focusing on paddy, wheat, pulses, and sugarcane; rich in mica and stone quarrying deposits.',
+        ],
+      },
+    ],
+  },
 };
