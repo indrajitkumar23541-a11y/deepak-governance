@@ -10,7 +10,6 @@ import Gallery from './components/Gallery';
 import DailyQuote from './components/DailyQuote';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import MobileNav from './components/MobileNav';
 
 export default function App() {
   return (
@@ -29,7 +28,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <MobileNav />
     </>
   );
 }

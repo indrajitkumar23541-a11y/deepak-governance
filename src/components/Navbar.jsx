@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}
+      className={`${styles.navbar} ${scrolled || mobileOpen ? styles.scrolled : ''}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}

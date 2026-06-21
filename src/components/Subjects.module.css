@@ -50,3 +50,9 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
 }
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

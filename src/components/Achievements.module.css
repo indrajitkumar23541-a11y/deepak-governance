@@ -119,21 +119,28 @@
 
   .entry {
     width: 100%;
-    padding-left: var(--space-12);
-    padding-right: 0;
+    padding-left: var(--space-12) !important;
+    padding-right: 0 !important;
     text-align: left;
   }
 
   .left {
-    text-align: left;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: var(--space-12) !important;
+    padding-right: 0 !important;
   }
 
   .right {
-    left: 0;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: var(--space-12) !important;
+    padding-right: 0 !important;
   }
 
-  .left .cardHeader {
-    flex-direction: row;
+  .left .cardHeader,
+  .right .cardHeader {
+    flex-direction: row !important;
   }
 
   .dot {
@@ -141,8 +148,9 @@
     right: auto !important;
   }
 
-  .left .certificateLink {
-    align-self: flex-start;
+  .left .certificateLink,
+  .right .certificateLink {
+    align-self: flex-start !important;
   }
 }
 
