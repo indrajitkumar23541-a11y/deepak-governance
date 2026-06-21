@@ -649,3 +649,9 @@
   margin-top: var(--space-1);
   font-weight: 500;
 }
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

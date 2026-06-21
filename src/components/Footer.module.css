@@ -148,5 +148,23 @@
   }
   .brand {
     grid-column: auto;
+    text-align: center;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .linkList {
+    align-items: center;
+  }
+  .newsletterForm {
+    justify-content: center;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
   }
 }
