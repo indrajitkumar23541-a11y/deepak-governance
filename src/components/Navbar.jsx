@@ -36,8 +36,13 @@ export default function Navbar() {
   const handleClick = (e, href) => {
     e.preventDefault();
     setMobileOpen(false);
+    document.body.style.overflow = '';
     const target = document.querySelector(href);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
   };
 
   return (
