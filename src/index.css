@@ -121,6 +121,11 @@
   padding: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -136,7 +141,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-smoothing: grayscale;
   transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+main {
+  width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 img {

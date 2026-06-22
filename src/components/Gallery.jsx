@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPlus, FaUpload, FaTrash, FaEye, FaTimes, FaCalendarAlt, FaInfoCircle, FaLock } from 'react-icons/fa';
+import { FaPlus, FaUpload, FaTrash, FaEye, FaTimes, FaCalendarAlt, FaInfoCircle } from 'react-icons/fa';
 import SectionHeading from './ui/SectionHeading';
 import Card from './ui/Card';
 import Button from './ui/Button';
@@ -18,7 +18,7 @@ export default function Gallery() {
         const parsed = JSON.parse(saved);
         const userUploaded = parsed.filter(item => item.isUserUploaded);
         return [...initialGalleryData, ...userUploaded];
-      } catch (e) {
+      } catch {
         return initialGalleryData;
       }
     }
@@ -44,7 +44,7 @@ export default function Gallery() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (password === 'admin123') {
+    if (password === 'Deepak@15_06_2005') {
       setIsAdmin(true);
       sessionStorage.setItem('deepak_portfolio_isAdmin', 'true');
       setShowLoginModal(false);
